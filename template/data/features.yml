@@ -1,8 +1,8 @@
 - title: Build with Middleman
-  desc: Build your project on Middleman 4 and take advantage of the new external pipeline
+  desc: Build your project on Middleman 4 and take advantage of the external pipeline
   icon: icon fa fa-flag-o
   wow_delay: 0.7s
-- title: Compile with Gulp
+- title: Automate with Gulp
   desc: Let gulp handle all of your js build tasks as well as prune your css with uncss
   icon: icon fa fa-map-o
   wow_delay: 0.9s
