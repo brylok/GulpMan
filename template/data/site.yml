@@ -1,0 +1,5 @@
+name: GulpMan
+title: Easily deploy a Middleman website to an S3 bucket
+download_link: http://github.com/brylok/gulpman/archive/master.zip
+github_link: https://github.com/brylok/gulpman
+google_analytics_key: 12345678

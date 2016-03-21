@@ -1,0 +1,35 @@
+# Copy ./source/environment_variables.rb
+# then update settings there.
+require "./data/environment_variables.rb"
+
+desc "Run the preview server at http://localhost:4567"
+task :preview do
+  puts "## Running Preview Server"
+  system("bundle exec middleman server")
+end
+
+desc "Build the website from source"
+task :build do
+  puts "## Building website from source"
+  sh "bundle exec middleman build --clean"
+  puts "## Removing unused css"
+  sh "gulp cleancss"
+end
+
+
+# Command to deploy to staging and production
+namespace :deploy do
+
+  desc "Build and deploy website to staging"
+  task :staging => [:build] do
+    sh "aws --profile=#{ENV['s3_profile']} s3 sync #{ENV['build_folder']} s3://#{ENV['site_bucket_staging']}/ --acl=#{ENV['s3_permissions']} --delete --cache-control='max-age=1576800000' --exclude '*.html'"
+    sh "aws --profile=#{ENV['s3_profile']} s3 sync #{ENV['build_folder']} s3://#{ENV['site_bucket_staging']}/ --acl=#{ENV['s3_permissions']} --delete --cache-control='max-age=0, no-cache' --exclude '*' --include '*.html'"
+  end
+
+  desc "Build and deploy website to production"
+  task :production => [:build] do
+    sh "aws --profile=#{ENV['s3_profile']} s3 sync #{ENV['build_folder']} s3://#{ENV['site_bucket_production']}/ --acl=#{ENV['s3_permissions']} --delete --cache-control='max-age=1576800000' --exclude '*.html'"
+    sh "aws --profile=#{ENV['s3_profile']} s3 sync #{ENV['build_folder']} s3://#{ENV['site_bucket_production']}/ --acl=#{ENV['s3_permissions']} --delete --cache-control='max-age=0, no-cache' --exclude '*' --include '*.html'"
+  end
+
+end

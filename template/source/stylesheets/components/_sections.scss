@@ -1,0 +1,163 @@
+//section styles
+.main-section {
+  min-height: 100%;
+  padding-top: 150px;
+  text-align: center;
+}
+
+.section-one.main-section,  {
+  background: #212425 image-url('bg.jpg') no-repeat fixed top center;
+  background-size: cover;
+  color: $S3bootstrapwhite;
+}
+
+.section-two.main-section {
+  background: $S3bootstrapwhite;
+  color: $S3bootstrapnav;
+}
+
+
+//section one styles
+.section-one {
+  padding: 0;
+  margin-bottom: 0;
+  padding: 150px 0 80px;
+  overflow: hidden;
+
+  @include breakpoint(small) {
+    padding-top: 50px;
+  }
+
+  @include breakpoint(verysmall) {
+    padding-top: 50px;
+  }
+
+  .text-col {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  p.subtitle {
+    padding: 0% 10%;
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    opacity: 1;
+    margin-bottom: 20px;
+
+    @include breakpoint(verysmall) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include breakpoint(small) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  .wow {
+    visibility: hidden;
+  }
+
+  .btn-primary {
+    background: $s3bootstrapgold;
+    border-color: $s3bootstrapgold;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
+    transition: box-shadow transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 20px;
+
+    @include breakpoint(verysmall) {
+      font-size: 14px;
+      margin: 5px;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 14px;
+      margin: 10px;
+    }
+
+    &:active {
+      background: $s3bootstrapgold;
+      border-color: $s3bootstrapgold;
+      box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
+    }
+
+    &:hover {
+      box-shadow: 0 3px 6px rgba(0,0,0, .16), 0 3px 6px rgba(0,0,0, .23);
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+
+.section-one.main-section .large-icon {
+  font-size: 175px;
+  margin-bottom: 25px;
+  color: $s3bootstrapgold;
+
+  @include breakpoint(verysmall) {
+    font-size: 100px;
+  }
+
+  @include breakpoint(small) {
+    font-size: 125px;
+  }
+
+  @include breakpoint(medium) {
+    font-size: 150px;
+  }
+}
+
+//section one callout sections
+.section-one {
+
+  .callout {
+    margin-bottom: 20px;
+
+    @include breakpoint(verysmall) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 60px;
+    line-height: 30px;
+    margin-bottom: 10px;
+
+    @include breakpoint(verysmall) {
+      font-size: 40px;
+      margin-bottom: 5px;
+      line-height: 40px;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
+}
+
+//section two styles
+.section-two {
+  margin-bottom: 100px;
+  padding-top: 75px;
+}

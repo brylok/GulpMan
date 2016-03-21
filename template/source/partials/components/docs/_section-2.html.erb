@@ -1,0 +1,83 @@
+<!-- Section Three -->
+<section id="section-two" class="main-section section-two">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="col-md-6" style="text-align:left;">
+          <h2>Get Started</h2>
+          <p>This is a <a href="https://middlemanapp.com/">Middleman</a> project template and assumes that you are familiar with middleman.</p>
+          <p>Create a new Middleman project</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">middleman init -T brylok/gulpman</code></pre>
+          </div>
+          <br/>
+          <h2>Rake Commands</h2>
+          <p>Preview your project in the browser with autoreload</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">rake preview</code></pre>
+          </div>
+          <br/>
+          <p>Build Your Project to a Local Folder</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">rake build</code></pre>
+          </div>
+          <br/>
+          <p>Deploy Your Project to Staging</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">rake deploy:staging</code></pre>
+          </div>
+          <br/>
+          <p>Deploy Your Project to Production</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">rake deploy:production</code></pre>
+          </div>
+          <br/>
+          <h2>Troubleshooting</h2>
+          <p>If you run into trouble with the install, make sure you have middleman CLI installed globally:</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">gem install middleman</code></pre>
+          </div>
+          <p>If you run into trouble with the uncss task you might need to install PhantomJS manually:</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">brew install phantomjs</code></pre>
+          </div>
+          <p>If you need to reinstall gems or packages:</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">bundle install; npm install</code></pre>
+          </div>
+          <p>Also, be sure to have Ruby ^2.2.2</p>
+          <br/>
+
+        </div>
+
+        <div class="col-md-6" style="text-align:left;">
+          <h2>Deployment Setup</h2>
+          <p>Deployment is handled using the <a href="http://docs.aws.amazon.com/cli/latest/userguide/installing.html">Aws-cli</a>.</p>
+          <p>To install the aws-cli you need to install pip</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">apt-get install python-pip</code></pre>
+          </div>
+          <p>Then install the Aws-cli</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">pip install awscli</code></pre>
+          </div>
+          <p>Then create folder & file for AWS credentials.</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">mkdir ~/.aws; touch ~/.aws/config</code></pre>
+          </div>
+          <p>Now all you need to do is update the ~/.aws/config file with your AWS info. Here is an example</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">[default]<br/>aws_access_key_id=DIDQRGBGOIAMJKIAJ6HG<br/>aws_secret_access_key=elDi1sryRQe6vATwZ4wYIgAZ93kZHjubOIltLTJm<br/>region=us-west-2</code></pre>
+          </div
+          <br/>
+          <h2>Environmental Variables</h2>
+          <p>Many of the project environmental variables are stored in the data/environment_variables.rb file:</p>
+          <p>This is where you will set the following information:</p>
+          <div class="highlight">
+            <pre><code class="language-bash" data-lang="bash">ENV['build_folder'] = "build/"<br/>ENV['s3_profile'] = "default"<br/>ENV['s3_permissions'] = "public-read"<br/>ENV['site_url_development'] = "http://0.0.0.0:4567"<br/>ENV['site_url_staging'] = "http://someaddress.com/staging"<br/>ENV['site_bucket_staging'] = "someaddress.com/staging"<br/>ENV['site_url_production'] = "http://someaddress.com/production"<br/>ENV['site_bucket_production'] = "someaddress.com/production"</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

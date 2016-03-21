@@ -1,0 +1,12 @@
+- title: Build with Middleman
+  desc: Build your project on Middleman 4 and take advantage of the new external pipeline
+  icon: icon fa fa-flag-o
+  wow_delay: 0.7s
+- title: Compile with Gulp
+  desc: Let gulp handle all of your js build tasks as well as prune your css with uncss
+  icon: icon fa fa-map-o
+  wow_delay: 0.9s
+- title: Deploy to S3
+  desc: Deploy your project to a staging or production S3 bucket using a single rake command
+  icon: icon fa fa-arrow-circle-o-up
+  wow_delay: 1.1s

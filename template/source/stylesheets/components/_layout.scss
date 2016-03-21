@@ -1,0 +1,62 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+//docs layout styles
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.8;
+  background: #eee;
+  width: 100%;
+  height: 100%;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:active, a:hover {
+  text-decoration: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 700
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  opacity: 1;
+  font-size: 3.8em;
+  line-height: 50px;
+
+  @include breakpoint(verysmall) {
+    margin-bottom: 15px;
+    line-height: 30px;
+  }
+
+  @include breakpoint(medium) {
+    margin-bottom: 10px;
+    line-height: 40px;
+  }
+}
+
+::-moz-selection {
+  background: lightgrey;
+  text-shadow: none
+}
+
+::selection {
+  background: lightgrey;
+  text-shadow: none
+}
+
+p {
+  font-size: 1.5em
+}

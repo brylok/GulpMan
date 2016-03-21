@@ -1,0 +1,21 @@
+{
+  "name": "gulpman",
+  "version": "0.1.0",
+  "description": "A Middleman 4 template project using external pipeline with gulp",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Lokey",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^1.1.0",
+    "gulp-gzip": "^1.2.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-uncss": "^1.0.5"
+  }
+}

@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+<%= partial "partials/includes/head" %>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="<%= page_classes %> <%= current_page.data.layout %>">
+
+
+<%= yield %>
+<%= javascript_include_tag  "application" %>
+</body>
+</html>

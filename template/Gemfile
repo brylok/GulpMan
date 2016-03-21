@@ -1,0 +1,22 @@
+# If you do not have OpenSSL installed, change
+# the following line to use 'http://'
+source 'https://rubygems.org'
+
+# Middleman Gems
+gem 'middleman', '>= 4.0.0'
+gem 'middleman-livereload'
+
+# required to autoprefix scss
+gem 'middleman-autoprefixer'
+
+# required to minify html
+gem 'middleman-minify-html'
+
+# required to auto create favicon
+#gem "middleman-favicon-maker", "~> 3.7"
+
+# required for bootstrap sass
+gem 'bootstrap-sass'
+
+# required to run Rake tasks
+gem 'rake', '~> 10.5'

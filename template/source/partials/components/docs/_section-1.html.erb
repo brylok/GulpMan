@@ -1,0 +1,27 @@
+<!-- Section One -->
+<section id="section-one" class="main-section section-one">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-col wow bounceInUp" data-wow-delay="0.1s">
+        <h1><%= data.site.name %></h1>
+        <p class="subtitle"><%= data.site.title %></p>
+        <% link_to '#section-two', class: 'btn btn-primary btn-lg wow fadeIn page-scroll', :data => { :'wow-delay' => '1.2s' } do %>
+            <i class="fa fa-info-circle"></i>
+            Read the Docs
+        <% end %>
+        <% link_to data.site.github_link, class: 'btn btn-primary btn-lg wow fadeIn', :data => { :'wow-delay' => '1.2s' } do %>
+            <i class="fa fa-github"></i>
+            View on Github
+        <% end %>
+      </div>
+
+      <% data.features.each do |feature| %>
+          <div class="callout col-lg-4 wow bounceIn" data-wow-delay='<%= feature.wow_delay %>'>
+            <span class='<%= feature.icon %>'></span>
+            <h2><%= feature.title %></h2>
+            <p><%= feature.desc %></p>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<nav class="navbar-wrapper">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-cubes"></i> <%= data.site.name %></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" id="main-menu">
+                  <% data.menu.each do |item| %>
+                      <li><a href="<%= item.link %>" class="page-scroll"><%= item.title %><span class="sr-only"></span></a></li>
+                  <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
